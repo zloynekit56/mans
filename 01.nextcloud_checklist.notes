@@ -213,33 +213,33 @@ sudo a2ensite nextcloud.conf
 
 ----------------------------------------------------------------
 12. "Конфигурирование appache сервера"
-# sudo vim /etc/php/8.1/apache2/php.ini
+# sudo vim /etc/php/8.3/apache2/php.ini
 
 # провести проверку текущих настроек через cat
-cat /etc/php/8.1/apache2/php.ini | grep 'memory_limit = '
-cat /etc/php/8.1/apache2/php.ini | grep 'upload_max_filesize ='
-cat /etc/php/8.1/apache2/php.ini | grep 'max_execution_time ='
-cat /etc/php/8.1/apache2/php.ini | grep 'post_max_size ='
-cat /etc/php/8.1/apache2/php.ini | grep 'date.timezone ='
-cat /etc/php/8.1/apache2/php.ini | grep 'opcache.enable='
-cat /etc/php/8.1/apache2/php.ini | grep 'opcache.interned_strings_buffer='
-cat /etc/php/8.1/apache2/php.ini | grep 'opcache.max_accelerated_files='
-cat /etc/php/8.1/apache2/php.ini | grep 'opcache.memory_consumption='
-cat /etc/php/8.1/apache2/php.ini | grep 'opcache.save_comments='
-cat /etc/php/8.1/apache2/php.ini | grep 'opcache.revalidate_freq='
+cat /etc/php/8.3/apache2/php.ini | grep 'memory_limit = '
+cat /etc/php/8.3/apache2/php.ini | grep 'upload_max_filesize ='
+cat /etc/php/8.3/apache2/php.ini | grep 'max_execution_time ='
+cat /etc/php/8.3/apache2/php.ini | grep 'post_max_size ='
+cat /etc/php/8.3/apache2/php.ini | grep 'date.timezone ='
+cat /etc/php/8.3/apache2/php.ini | grep 'opcache.enable='
+cat /etc/php/8.3/apache2/php.ini | grep 'opcache.interned_strings_buffer='
+cat /etc/php/8.3/apache2/php.ini | grep 'opcache.max_accelerated_files='
+cat /etc/php/8.3/apache2/php.ini | grep 'opcache.memory_consumption='
+cat /etc/php/8.3/apache2/php.ini | grep 'opcache.save_comments='
+cat /etc/php/8.3/apache2/php.ini | grep 'opcache.revalidate_freq='
 
 # заменить требуемые строки настроек
-sudo sed -i 's/memory_limit = 128M/memory_limit = 512M/g' /etc/php/8.1/apache2/php.ini
-sudo sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 200M/g' /etc/php/8.1/apache2/php.ini
-sudo sed -i 's/max_execution_time = 30/max_execution_time = 360/g' /etc/php/8.1/apache2/php.ini
-sudo sed -i 's/post_max_size = 8M/post_max_size = 200M/g' /etc/php/8.1/apache2/php.ini
-sudo sed -i 's/;date.timezone =/date.timezone = Europe\/Moscow/g' /etc/php/8.1/apache2/php.ini
-sudo sed -i 's/;opcache.enable=1/opcache.enable=1/g' /etc/php/8.1/apache2/php.ini
-sudo sed -i 's/;opcache.interned_strings_buffer=8/opcache.interned_strings_buffer=16/g' /etc/php/8.1/apache2/php.ini
-sudo sed -i 's/;opcache.max_accelerated_files=10000/opcache.max_accelerated_files=10000/g' /etc/php/8.1/apache2/php.ini
-sudo sed -i 's/;opcache.memory_consumption=128/opcache.memory_consumption=128/g' /etc/php/8.1/apache2/php.ini
-sudo sed -i 's/;opcache.save_comments=1/opcache.save_comments=1/g' /etc/php/8.1/apache2/php.ini
-sudo sed -i 's/;opcache.revalidate_freq=2/opcache.revalidate_freq=1/g' /etc/php/8.1/apache2/php.ini
+sudo sed -i 's/memory_limit = 128M/memory_limit = 512M/g' /etc/php/8.3/apache2/php.ini
+sudo sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 200M/g' /etc/php/8.3/apache2/php.ini
+sudo sed -i 's/max_execution_time = 30/max_execution_time = 360/g' /etc/php/8.3/apache2/php.ini
+sudo sed -i 's/post_max_size = 8M/post_max_size = 200M/g' /etc/php/8.3/apache2/php.ini
+sudo sed -i 's/;date.timezone =/date.timezone = Europe\/Moscow/g' /etc/php/8.3/apache2/php.ini
+sudo sed -i 's/;opcache.enable=1/opcache.enable=1/g' /etc/php/8.3/apache2/php.ini
+sudo sed -i 's/;opcache.interned_strings_buffer=8/opcache.interned_strings_buffer=16/g' /etc/php/8.3/apache2/php.ini
+sudo sed -i 's/;opcache.max_accelerated_files=10000/opcache.max_accelerated_files=10000/g' /etc/php/8.3/apache2/php.ini
+sudo sed -i 's/;opcache.memory_consumption=128/opcache.memory_consumption=128/g' /etc/php/8.3/apache2/php.ini
+sudo sed -i 's/;opcache.save_comments=1/opcache.save_comments=1/g' /etc/php/8.3/apache2/php.ini
+sudo sed -i 's/;opcache.revalidate_freq=2/opcache.revalidate_freq=1/g' /etc/php/8.3/apache2/php.ini
 
 # провести проверку через cat снова, результат ниже:
 memory_limit = 512M
